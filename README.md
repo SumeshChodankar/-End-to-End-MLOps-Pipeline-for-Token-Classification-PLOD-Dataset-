@@ -6,14 +6,18 @@ End-to-End Deep Learning Pipeline for Scene Recognition
 University of Surrey logo
 Associated with University of Surrey
 Associated with University of Surrey
-Designed and built a complete machine learning pipeline for multi-class scene recognition, from data preprocessing to model evaluation. This project involved developing and comparing advanced deep learning architectures to identify the most performant solution for deployment, demonstrating an understanding of the full machine learning lifecycle.
 
-Problem: Classifying images into one of 40 scene categories from the PLACES2 dataset.
+Description:
+Designed and implemented an end-to-end MLOps pipeline for a deep learning-based NLP sequence classifier. This project focused on building a production-ready system that not only provided accurate predictions but was also rigorously tested, monitored, and set up for continuous integration and deployment.
 
-Methodology: Engineered a pipeline that included data augmentation to prevent overfitting. Compared two distinct architectures: a fine-tuned ResNet-34 and a Swin Transformer.
+Key Contributions:
+Model Engineering: Deployed a 300MB bert-base-uncased model for token classification, leveraging Hugging Face APIs for model building and deployment.
 
-Training & Optimization: Implemented transfer learning and systematically tuned hyperparameters, including comparing Adam and SGD optimizers, to enhance model convergence.
+Deployment Strategy: Chose Hugging Face Spaces as the deployment platform after a detailed comparison, prioritizing its cost-effective free tier, ease of model updating, and high coordination ease for teamwork.
 
-Results: The ResNet-34 model achieved a Top-1 accuracy of 40.76% and a Top-5 accuracy of 74.16%, outperforming the Swin Transformer in this context.
+Testing & Validation: Conducted comprehensive functional and performance testing. Used 
+Locust to perform stretch testing, successfully simulating varying request loads and identifying the service's performance characteristics, including response time and failure rates under stress. We identified a payload limit of ~500 pages before the API failed.
 
-Deployment: The project included a conceptual plan for deploying the final model as a REST API to serve predictions, showcasing an understanding of MLOps principles.
+Monitoring & UX: Created a Python/Flask web application with an SQLite database to log and display user interactions and model predictions, simulating a real-world monitoring system for continuous analysis and improvement.
+
+CI/CD Implementation: Outlined a CI/CD pipeline and a Docker workflow to containerize the model and its dependencies, ensuring consistent execution and a streamlined path from development to deployment.
